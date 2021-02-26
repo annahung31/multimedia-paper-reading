@@ -1,11 +1,11 @@
 # multimedia-paper-reading
 The paper summaries I made during the Course "Advanced topics in Multimedia Analysis and Indexing"@ NTU.
-Course ID: 922 U3710
+Course ID: 922 U3710  
 Lecturer: Winston Hsu
 
 ## Personal Info
-ID: R08922A20
-NAME: 洪筱慈
+ID: R08922A20  
+NAME: 洪筱慈  
 
 ## Outline
 ### Week 1: Data Augmentation
