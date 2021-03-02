@@ -29,12 +29,14 @@ Make the student model to be better than teacher, and more robust to different e
 
 ### Basic Training flow
 
-<img src=img/1-1-1.png width=400x>
-
 1. Using labeled data to train the teacher model.  
 2. Using the teacher model to generate pseudo label for unlabeled data.
 3. Using real label and pseudo label to train the noise-added student model.
 4. The student model is viewed as a new teacher model, and go back to 2.
+
+<div align="center">
+<img src=img/1-1-1.png width=400x>
+</div>
 
 ### Noising student
 
@@ -76,8 +78,9 @@ Make the student model to be better than teacher, and more robust to different e
 Using ImageNet classification Top-1 accuracy as evaluation matrix, we can see that:
 1. From teacher (EfficientNet-B7) to student (EfficientNet-L2), bigger model make a 0.5% improvement.
 2. Adding noise to student make 2.9% improvement. This indicate that nosing student is important.
-
+<div align="center">
 <img src=img/1-1-3.png width=500x>
+</div>
 
 <a id="iter"></a>
 
@@ -88,8 +91,9 @@ Using ImageNet classification Top-1 accuracy as evaluation matrix, we can see th
     - iter 2: teacher = EfficientNet-L2(1), student = EfficientNet-L2(2)
     - iter 3: teacher = EfficientNet-L2(2), student = EfficientNet-L2(3)
     
+<div align="center">
 <img src=img/1-1-2.png width=300x>
-
+</div>
 ### Robustness 
 
 * Using three robustness test sets: ImageNet-A, ImageNet-C, ImageNet-P:
