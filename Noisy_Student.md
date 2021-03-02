@@ -27,7 +27,7 @@ Make the student model to be better than teacher, and more robust to different e
 
 ## Detail of the methods
 
-### Basic Training flow
+### Basic training flow
 
 1. Using labeled data to train the teacher model.  
 2. Using the teacher model to generate pseudo label for unlabeled data.
@@ -99,7 +99,8 @@ Using ImageNet classification Top-1 accuracy as evaluation matrix, we can see th
 
 * Using three robustness test sets: ImageNet-A, ImageNet-C, ImageNet-P:
     - ImageNet-C, ImageNet-P: blurring, fogging, rotation, scaling.
-    - ImageNet-A: difficult images that will cause drops in accuracy.
+    - ImageNet-A: difficult images that will cause drops in accuracy.  
+    
 For all three test sets, the noising model outperformed other baseline and also un-noising model.  
 
 <img src=img/1-1-4.png width=900x>
