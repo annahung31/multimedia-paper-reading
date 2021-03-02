@@ -79,7 +79,7 @@ Using ImageNet classification Top-1 accuracy as evaluation matrix, we can see th
 1. From teacher (EfficientNet-B7) to student (EfficientNet-L2), bigger model make a 0.5% improvement.
 2. Adding noise to student make 2.9% improvement. This indicate that nosing student is important.
 <div align="center">
-<img src=img/1-1-3.png width=500x>
+<img src=img/1-1-3.png width=600x>
 </div>
 
 <a id="iter"></a>
@@ -94,6 +94,7 @@ Using ImageNet classification Top-1 accuracy as evaluation matrix, we can see th
 <div align="center">
 <img src=img/1-1-2.png width=300x>
 </div>
+
 ### Robustness 
 
 * Using three robustness test sets: ImageNet-A, ImageNet-C, ImageNet-P:
