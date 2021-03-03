@@ -30,7 +30,7 @@
 * Geometric v.s photometric transformations:  
     A study from Taylor and Nitschke shows the performance of different augmentation methods:
     <div align="left">
-    <img src=img/1-2-3.png width=400x>
+    <img src=img/1-2-3.png width=600x>
     </div>
 
 * Kernel filers
@@ -40,28 +40,28 @@
         - Disadvantage: similar to CNN filter
     - Type 2: `PatchShuffle`, randomly swap pixel values in a patch.
     <div align="left">
-    <img src=img/1-2-4.png width=400x>
+    <img src=img/1-2-4.png width=600x>
     </div>
 
 * Mixed images
 
     - Three ways to mix two images:
 
-        1. linearly adding the pixel values  
+        1. linearly averaging the pixel values  
         <div align="left">
-        <img src=img/1-2-5.png width=400x>
+        <img src=img/1-2-5.png width=600x>
         
         2. Generalized
         <div align="left">
-        <img src=img/1-2-6.png width=260x>
-        <img src=img/1-2-7.png width=300x>
+        <img src=img/1-2-6.png width=390x>
+        <img src=img/1-2-7.png width=450x>
 
         3. Using GAN: can reduce the training time and increase the diversity of GAN samples. The disadvantage is hard to explain.
         </div>
 
 * Random erasing
     <div align="left">
-    <img src=img/1-2-8.png width=400x>
+    <img src=img/1-2-8.png width=500x>
     </div>
 
 NOTE: Using these augmentation can produce a big amount of data, but not always advantageous. In domain with limited data, these methods will cause over-fitting because of lack of diversity.  
