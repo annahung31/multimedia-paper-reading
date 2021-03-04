@@ -13,7 +13,7 @@
 ## Key takeaway
 
 * Choose augmentation method based on your task.
-* The policy to use augmented data needs to be considered.(refer to [Curriculum learning](#policy))
+* The training policy of augmented data needs to be considered.(refer to [Curriculum learning](#policy))
 * You can choose online data augmentation(instead of doing augmentation during pre-processing) to save memory.
 
 
@@ -62,10 +62,10 @@
         
         2. Generalized
         <div align="left">
-        <img src=img/1-2-6.png width=390x>
+        <img src=img/1-2-6.png width=385x>
         <img src=img/1-2-7.png width=450x>
 
-        3. Using GAN: can reduce the training time and increase the diversity of GAN samples. The disadvantage is hard to explain.
+        3. Using GAN: Can reduce the training time and increase the diversity of GAN samples. The disadvantage is hard to explain.
         </div>
 
 * Random erasing
@@ -104,7 +104,7 @@ NOTE: Using these augmentation can produce a big amount of data, but not always 
     - Using GAN or VAE to generate samples.
     - The author thinks that GANs are the most promising generative modeling technique for use in data augmentation.
     - Example: DCGAN, CycleGAN, Conditional GAN
-    - GAN samples can be used to generate samples to solve class imbalance.
+    - GAN can be used to generate samples to solve class imbalance.
     - Limitations: 
         - Still have difficulty on generating high-resolution outputs.
         - Training GAN itself also requires a big amount of data.
@@ -126,7 +126,7 @@ NOTE: Using these augmentation can produce a big amount of data, but not always 
     <div align="center">
     <img src=img/1-2-13.png width=500x>
     </div>
-    - AutoAugment
+    
 
 NOTE: The disadvantage of these methods is that it's hard to explain why they work, hard to interpret the representation they learned.
 
@@ -150,7 +150,7 @@ NOTE: The disadvantage of these methods is that it's hard to explain why they wo
 
 ## Discussions
 
-- Limitation of data augmentation: augmentation methods perform better under the assumption that training set and test set have similar degree of diversity.  For example, in a dog breed classification task, if there is no Border Collie in the training set, no augmentation method can create one.
+- **Limitation of data augmentation**: augmentation methods perform better under the assumption that training set and test set have similar degree of diversity.  For example, in a dog breed classification task, if there is no Border Collie in the training set, no augmentation method can create one.
 
 - Some experiments have shown that the combination of augmentation methods can improve the performance, but there is still no consensus about the best strategy for combining data warping and oversampling techniques.
 
