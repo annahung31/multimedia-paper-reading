@@ -8,6 +8,15 @@
 - GitHub: 
 - work field: Image data processing
 
+
+
+## Key takeaway
+
+* Choose augmentation method based on your task.
+* The policy to use augmented data needs to be considered.(refer to [Curriculum learning](#policy))
+* You can choose online data augmentation(instead of doing augmentation during pre-processing) to save memory.
+
+
 ## Data augmentation methods included in this survey
 
 ### Methods Based on Basic image manipulations
@@ -129,8 +138,20 @@ NOTE: The disadvantage of these methods is that it's hard to explain why they wo
     - A good classifier should have good performance on augmented test set. For example, a prediction image of an image should not be different when the same image is rotated 20 degree.
 
 
+<a id="policy"></a>
+
+* **Curriculum learning**: how we make use of original data and augmented data?
+    - Some research advice that it is better to train with original data first and then finish training with original data and augmented data. For example, 100 epoch for original data, and after adding augmented data, run in cycle between 8:2 epochs.
+    - Training accuracy over time across different initial training subsets could help reveal patterns in the data that dramatically speed up training time.
+
+* Determination of the final dataset size
+
+    - What you need to consider: additional memory and compute constraints for the augmented data. There are two options: online data augmentation and offline augmentation.
+
 ## Discussions
 
 - Limitation of data augmentation: augmentation methods perform better under the assumption that training set and test set have similar degree of diversity.  For example, in a dog breed classification task, if there is no Border Collie in the training set, no augmentation method can create one.
 
 - Some experiments have shown that the combination of augmentation methods can improve the performance, but there is still no consensus about the best strategy for combining data warping and oversampling techniques.
+
+
