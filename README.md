@@ -14,6 +14,10 @@ NAME: 洪筱慈
 * A survey on Image Data Augmentation for Deep Learning  
     - [Summary](img_data_Aug.md), [Paper](https://journalofbigdata.springeropen.com/track/pdf/10.1186/s40537-019-0197-0.pdf)
 
+* My personal further reading: 
+    - Data augmentation on audio: [Data Augmentation for Instrument Classification Robust to Audio Effects](https://arxiv.org/abs/1907.08520)
+    - PyTorch official audio toolkit: [torchAudio](https://pytorch.org/audio/stable/torchaudio.html)
+
 
 ### Week 2:
 * Deep Learning for Understanding Faces: Machines May Be Just as Good, or Better, than Humans
