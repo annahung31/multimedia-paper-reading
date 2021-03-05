@@ -155,3 +155,9 @@ NOTE: The disadvantage of these methods is that it's hard to explain why they wo
 - Some experiments have shown that the combination of augmentation methods can improve the performance, but there is still no consensus about the best strategy for combining data warping and oversampling techniques.
 
 
+
+
+## Personal extension:
+Some matrial related to data augmentation on audio:
+    - Data augmentation on audio: [Data Augmentation for Instrument Classification Robust to Audio Effects](https://arxiv.org/abs/1907.08520)
+    - PyTorch official audio toolkit: [torchAudio](https://pytorch.org/audio/stable/torchaudio.html)
