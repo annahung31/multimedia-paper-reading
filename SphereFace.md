@@ -48,12 +48,11 @@ In Face Recognition, we can divide the problem into two kinds. If the testing fa
 
 ## Extended summary
 這一篇 paper 開啟了一系列 angular margin 的應用，包含後來的 CosFace(CVPR 2018)[2], ArcFace(CVPR 2019)[3]，可以說是一篇啟蒙 paper!  
-<a href="https://openaccess.thecvf.com/content_CVPR_2019/papers/Deng_ArcFace_Additive_Angular_Margin_Loss_for_Deep_Face_Recognition_CVPR_2019_paper.pdf"><img src=img/2-1-1.png  width=400x></a>
-
+<a href="https://openaccess.thecvf.com/content_CVPR_2019/papers/Deng_ArcFace_Additive_Angular_Margin_Loss_for_Deep_Face_Recognition_CVPR_2019_paper.pdf"><img src=img/2-1-1.png  width=600x></a>
 
 
 
 ### Reference
-[1] [SphereFace Paper Study and Implementation Notes](https://bobondemon.github.io/2019/06/18/SphereFace-paper-study-and-implementation-notes/)
-[2] [CosFace: Large Margin Cosine Loss for Deep Face Recognition](https://arxiv.org/abs/1801.09414)
+[1] [SphereFace Paper Study and Implementation Notes](https://bobondemon.github.io/2019/06/18/SphereFace-paper-study-and-implementation-notes/)  
+[2] [CosFace: Large Margin Cosine Loss for Deep Face Recognition](https://arxiv.org/abs/1801.09414)  
 [3] [ArcFace: Additive Angular Margin Loss for Deep Face Recognition, CVPR_2019](https://openaccess.thecvf.com/content_CVPR_2019/papers/Deng_ArcFace_Additive_Angular_Margin_Loss_for_Deep_Face_Recognition_CVPR_2019_paper.pdf)
