@@ -39,27 +39,29 @@ In Face Recognition, we can divide the problem into two kinds. If the testing fa
 ### From softmax loss to M-softmax loss
 
 原始 softmax loss 的 Decision boundary 並非只由角度決定，因此我們沒辦法單靠角度將不同類別分開。經過一番數學上的調整之後，讓 Decision boundary 完全只由角度決定，變成 M-softmax loss。  
-當<a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\dpi{100}&space;cos(\theta_{1})&space;>&space;cos(\theta_{2})" target="_blank"><img src="https://latex.codecogs.com/png.latex?\inline&space;\dpi{100}&space;cos(\theta_{1})&space;>&space;cos(\theta_{2})" title="cos(\theta_{1}) > cos(\theta_{2})" /></a>  ，則屬於第一類，反之則是第二類。
+當  <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\dpi{100}&space;cos(\theta_{1})&space;>&space;cos(\theta_{2})" target="_blank"><img src="https://latex.codecogs.com/png.latex?\inline&space;\dpi{100}&space;cos(\theta_{1})&space;>&space;cos(\theta_{2})" title="cos(\theta_{1}) > cos(\theta_{2})" /></a>  ，則屬於第一類，反之則是第二類。
 
 ### From M-softmax loss to A-softmax loss
 
-但作者不滿足於此，要分開就把它分超開！   
-A-softmax loss 則是進一步擴大差異，加入一個參數 ｍ，使得   <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\dpi{100}&space;cos(m&space;\theta_{1})&space;>&space;cos(\theta_{2})" target="_blank"><img src="https://latex.codecogs.com/png.latex?\inline&space;\dpi{100}&space;cos(m&space;\theta_{1})&space;>&space;cos(\theta_{2})" title="cos(m \theta_{1}) > cos(\theta_{2})" /></a>   
- 
-## Experiments
+但作者不滿足於此，要分開就把它分超開！ A-softmax loss 是在 M-softmax 中加入一個參數 ｍ，使得   <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\dpi{100}&space;cos(m&space;\theta_{1})&space;>&space;cos(\theta_{2})" target="_blank"><img src="https://latex.codecogs.com/png.latex?\inline&space;\dpi{100}&space;cos(m&space;\theta_{1})&space;>&space;cos(\theta_{2})" title="cos(m \theta_{1}) > cos(\theta_{2})" /></a> 。   
+從作者提供的簡單示意圖可以看到上述 loss 的差別， 原始 softmax loss 沒辦法單用角度來切開， M-softmax loss 可以， A-softmax loss 中兩群之間分得更開了。  
 
+<div align="center">
+<img src=img/2-1-2.png width=800x>
+</div>
 
+作者實際使用 A-softmax loss 實作 face recognition 在兩個 dataset: LFW, YTF 上，並且比較不同 m 的效果。結果指出，當 m 越大，準確率越高，證實 m 的放大效果可以使辨識更準確。
+<div align="center">
+<img src=img/2-1-3.png width=500x>
+</div>
 
-## Discussion
-
-
-## Extended summary
+## Extended survey
 這一篇 paper 開啟了一系列 angular margin 的應用，包含後來的 CosFace(CVPR 2018)[2], ArcFace(CVPR 2019)[3]，可以說是一篇啟蒙 paper!  
 <a href="https://openaccess.thecvf.com/content_CVPR_2019/papers/Deng_ArcFace_Additive_Angular_Margin_Loss_for_Deep_Face_Recognition_CVPR_2019_paper.pdf"><img src=img/2-1-1.png  width=600x></a>
 
 
 
-### Reference
+## Reference
 [1] [SphereFace Paper Study and Implementation Notes](https://bobondemon.github.io/2019/06/18/SphereFace-paper-study-and-implementation-notes/)  
 [2] [CosFace: Large Margin Cosine Loss for Deep Face Recognition](https://arxiv.org/abs/1801.09414)  
 [3] [ArcFace: Additive Angular Margin Loss for Deep Face Recognition, CVPR_2019](https://openaccess.thecvf.com/content_CVPR_2019/papers/Deng_ArcFace_Additive_Angular_Margin_Loss_for_Deep_Face_Recognition_CVPR_2019_paper.pdf)
