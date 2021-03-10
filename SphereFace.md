@@ -64,3 +64,5 @@ In Face Recognition, we can divide the problem into two kinds. If the testing fa
 [1] [SphereFace Paper Study and Implementation Notes](https://bobondemon.github.io/2019/06/18/SphereFace-paper-study-and-implementation-notes/)  
 [2] [CosFace: Large Margin Cosine Loss for Deep Face Recognition](https://arxiv.org/abs/1801.09414)  
 [3] [ArcFace: Additive Angular Margin Loss for Deep Face Recognition, CVPR_2019](https://openaccess.thecvf.com/content_CVPR_2019/papers/Deng_ArcFace_Additive_Angular_Margin_Loss_for_Deep_Face_Recognition_CVPR_2019_paper.pdf)
+
+* [Note]這篇 summary 用到的公式編輯器：https://www.codecogs.com/latex/eqneditor.php 
