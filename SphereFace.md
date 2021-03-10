@@ -36,9 +36,16 @@ In Face Recognition, we can divide the problem into two kinds. If the testing fa
 
 ## Loss design
 
-從最原始的 softmax loss 開始，
+### From softmax loss to M-softmax loss
 
+原始 softmax loss 的 Decision boundary 並非只由角度決定，因此我們沒辦法單靠角度將不同類別分開。經過一番數學上的調整之後，讓 Decision boundary 完全只由角度決定，變成 M-softmax loss。  
+當<a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\dpi{100}&space;\small&space;cos(\theta_{1})&space;>&space;cos(\theta_{2})" target="_blank"><img src="https://latex.codecogs.com/png.latex?\inline&space;\dpi{100}&space;\small&space;cos(\theta_{1})&space;>&space;cos(\theta_{2})" title="\small cos(\theta_{1}) > cos(\theta_{2})" /></a>  ，則屬於第一類，反之則是第二類。
 
+### From M-softmax loss to A-softmax loss
+
+但作者不滿足於此，要分開就把它分超開！   
+A-softmax loss 則是進一步擴大差異，加入一個參數 ｍ，使得   <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\dpi{100}&space;\small&space;cos(m&space;\theta_{1})&space;>&space;cos(\theta_{2})" target="_blank"><img src="https://latex.codecogs.com/png.latex?\inline&space;\dpi{100}&space;\small&space;cos(m&space;\theta_{1})&space;>&space;cos(\theta_{2})" title="\small cos(m \theta_{1}) > cos(\theta_{2})" /></a>    
+ 
 ## Experiments
 
 
