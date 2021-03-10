@@ -43,14 +43,13 @@ In Face Recognition, we can divide the problem into two kinds. If the testing fa
 
 ### From M-softmax loss to A-softmax loss
 
-但作者不滿足於此，要分開就把它分超開！ A-softmax loss 是在 M-softmax 中加入一個參數 ｍ，使得   <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\dpi{100}&space;cos(m&space;\theta_{1})&space;>&space;cos(\theta_{2})" target="_blank"><img src="https://latex.codecogs.com/png.latex?\inline&space;\dpi{100}&space;cos(m&space;\theta_{1})&space;>&space;cos(\theta_{2})" title="cos(m \theta_{1}) > cos(\theta_{2})" /></a> 。   
-從作者提供的簡單示意圖可以看到上述 loss 的差別， 原始 softmax loss 沒辦法單用角度來切開， M-softmax loss 可以， A-softmax loss 中兩群之間分得更開了。  
-
+但作者不滿足於此，要分開就把它分超開！ A-softmax loss 是在 M-softmax 中加入一個參數 ｍ，使得   <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\dpi{100}&space;cos(m&space;\theta_{1})&space;>&space;cos(\theta_{2})" target="_blank"><img src="https://latex.codecogs.com/png.latex?\inline&space;\dpi{100}&space;cos(m&space;\theta_{1})&space;>&space;cos(\theta_{2})" title="cos(m \theta_{1}) > cos(\theta_{2})" /></a> 。     
 <div align="center">
-<img src=img/2-1-2.png width=800x>
+<img src=img/2-1-2.png width=1000x>
 </div>
+從作者提供的簡單示意圖可以看到上述 loss 的差別， 原始 softmax loss 沒辦法單用角度來切開， M-softmax loss 可以， A-softmax loss 中兩群之間分得更開了。
 
-作者實際使用 A-softmax loss 實作 face recognition 在兩個 dataset: LFW, YTF 上，並且比較不同 m 的效果。結果指出，當 m 越大，準確率越高，證實 m 的放大效果可以使辨識更準確。
+為了證明 A-softmax loss 有效，作者實際使用 A-softmax loss 實作 face recognition 在兩個 dataset： LFW, YTF 上，並且比較不同 m 的效果。結果指出，當 m 越大，準確率越高，證實 m 的放大效果可以使辨識更準確。
 <div align="center">
 <img src=img/2-1-3.png width=500x>
 </div>
