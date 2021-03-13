@@ -19,8 +19,15 @@ NAME: 洪筱慈
     - PyTorch official audio toolkit: [torchAudio](https://pytorch.org/audio/stable/torchaudio.html)
 
 
-### Week 2:
+### Week 2: Face Recognition
+
 * Deep Learning for Understanding Faces: Machines May Be Just as Good, or Better, than Humans
     - [Summary](DL_face.md), [Paper](https://ieeexplore.ieee.org/document/8253595)
 * SphereFace: Deep Hypersphere Embedding for Face Recognition
     - [Summary](SphereFace.md), [Paper](https://ieeexplore.ieee.org/document/8253595), [Code](https://github.com/wy1iu/sphereface)
+
+
+### Week 3: Advanced Face Recognition
+
+* Exploiting Generative Models in Discriminative Classifiers
+    - [Summary](Gen_classifier.md), [Paper](https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.44.7709&rep=rep1&type=pdf)
