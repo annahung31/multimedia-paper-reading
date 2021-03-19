@@ -27,7 +27,13 @@ NAME: 洪筱慈
     - [Summary](SphereFace.md), [Paper](https://ieeexplore.ieee.org/document/8253595), [Code](https://github.com/wy1iu/sphereface)
 
 
-### Week 3: Advanced Face Recognition
+### Week 3: Varying Effective Cost Functions
 
 * Exploiting Generative Models in Discriminative Classifiers
-    - [Summary](Gen_classifier.md), [Paper](https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.44.7709&rep=rep1&type=pdf)
+    - [Summary](Gen_classifier.md), [Paper](https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.44.7709&rep=rep1&type=pdf)   
+
+### Week 4: Advanced Hash Learning and Optimization  
+
+* Learning to Hash for Indexing Big Data – A Survey  
+    - [Summary](hash.md), [Paper](https://arxiv.org/abs/1509.05472)  
+
