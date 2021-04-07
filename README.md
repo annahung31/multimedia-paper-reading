@@ -8,7 +8,7 @@ ID: R08922A20
 NAME: 洪筱慈  
 
 ## Outline
-### Week 1: Data Augmentation
+### Week 2: Data Augmentation
 * Self-training with Noisy Student improves ImageNet classification  
     - [Summary](Noisy_Student.md), [Paper](https://arxiv.org/abs/1911.04252), [Code](https://github.com/google-research/noisystudent)
 * A survey on Image Data Augmentation for Deep Learning  
@@ -19,7 +19,7 @@ NAME: 洪筱慈
     - PyTorch official audio toolkit: [torchAudio](https://pytorch.org/audio/stable/torchaudio.html)
 
 
-### Week 2: Face Recognition
+### Week 3: Face Recognition
 
 * Deep Learning for Understanding Faces: Machines May Be Just as Good, or Better, than Humans
     - [Summary](DL_face.md), [Paper](https://ieeexplore.ieee.org/document/8253595)
@@ -27,13 +27,18 @@ NAME: 洪筱慈
     - [Summary](SphereFace.md), [Paper](https://ieeexplore.ieee.org/document/8253595), [Code](https://github.com/wy1iu/sphereface)
 
 
-### Week 3: Varying Effective Cost Functions
+### Week 4: Varying Effective Cost Functions
 
 * Exploiting Generative Models in Discriminative Classifiers
     - [Summary](Gen_classifier.md), [Paper](https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.44.7709&rep=rep1&type=pdf)   
 
-### Week 4: Advanced Hash Learning and Optimization  
+### Week 5: Advanced Hash Learning and Optimization  
 
 * Learning to Hash for Indexing Big Data – A Survey  
     - [Summary](hash.md), [Paper](https://arxiv.org/abs/1509.05472)  
 
+
+### Week 7: Manifold Learning and Optimization 
+
+* Graph Embedding and Extensions: A General Framework for Dimensionality Reduction  
+    - [Summary](graph_embd.md), [Paper](https://www.researchgate.net/publication/220181328_Graph_Embedding_and_Extensions_A_General_Framework_for_Dimensionality_Reduction)  
