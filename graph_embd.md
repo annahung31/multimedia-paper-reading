@@ -21,20 +21,18 @@ NAME: 洪筱慈
 ### 什麼時候會用到降維？   
 舉影像辨識為例，要判斷一張照片中是貓還是狗，我們其實不需要知道每一個 pixel 的值是多少，只要知道輪廓，就能夠判斷出來。真實的訓練資料通常是很高維度的資料，例如相片 raw 檔，說話音源，但是真實資料中往往包含許多重複不需要的 feature， 假如 feature 數量相較於 training data 的數量大很多，就可能導致 model overfitting。  
 
-<figure class="image">
-  <img src='img/7-1-1.png'>
-  <figcaption>As the number of features increases, the model becomes more complex. The more the number of features, the more the chances of overfitting. [2]</figcaption>
-</figure>
+![](img/7-1-1.png)
+*The Curse of Dimensionality: As the number of features increases, the model becomes more complex. The more the number of features, the more the chances of overfitting. [2]*
+
 
 因此減少不必要 feature 的一種方式就是降維。  
 
 ### 常見的降維方法 
 1. 線性降維：PCA (Principal Component Analysis),Factor Analysis, LDA (Linear Discriminant Analysis)  
 
-<figure class="image">
-  <img src='img/7-1-2.png'>
-  <figcaption>PCA orients data along the direction of the component with maximum variance whereas LDA projects the data to signify the class separability [2]</figcaption>
-</figure>
+![](img/7-1-2.png)
+*PCA orients data along the direction of the component with maximum variance whereas LDA projects the data to signify the class separability [2]*
+
 
 2. 非線性降維： ISOMAP、LLE、Laplacian Eigenmap, kernel trick 。  
 
