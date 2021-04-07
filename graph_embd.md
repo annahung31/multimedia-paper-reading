@@ -47,12 +47,10 @@ MFA 是一種基於 graph embedding framework 的方法, 其中包含：
 1. intrinsic graph: 評估同一類別 data 的緊密程度(compactness)  
 2. penalty graph: 評估不同類別 data 之間的差異程度。  
 
-Graph embedding，是用來將 graph 上的 node, edge 等等轉換到向量空間，但是仍然保存 graph 的架構和性質。（ graph 上的 node 是離散的，但是 deep learning 需要作用於連續的空間，因此 graph embedding 是將離散性質 mapping 到連續空間，才能納入 model 使用）  
+Graph embedding，是用來將 graph 上的 node, edge 等等轉換到向量空間，但是仍然保存 graph 的架構和性質。（ graph 上的 node 是離散的，但是 deep learning 需要作用於連續的空間，因此 graph embedding 是將離散性質 mapping 到連續空間，才能納入 model 使用）   
 
 ### Experiments  
 為了證明 MFA 的效用，作者將之做在 Face Recognition 上面，實驗顯示加了 MFA 可以提高 performance。    
-
-
 
 
 ## Reference
