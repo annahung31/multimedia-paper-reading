@@ -16,7 +16,7 @@ NAME: 洪筱慈
 - work field: `Dimension Reduction`, `Feature Engineering`  
 
 ## Key contribution  
-提出一種新的降維方式 Marginal Fisher Analysis (MFA)， 能夠使 intra class 更加群聚， inter class 分得更開。
+提出一種基於 graph embedding 的降維方式 Marginal Fisher Analysis (MFA)， 能夠使 intra class 更加群聚， inter class 分得更開。
 
 
 ## Introduction 
