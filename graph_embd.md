@@ -4,7 +4,7 @@
 
 
 ## Personal Info
-ID: R08922A20
+ID: R08922A20  
 NAME: 洪筱慈
 
 ## Paper basic information
@@ -41,7 +41,7 @@ NAME: 洪筱慈
 然而，這些傳統的降維方式，都是建立在 “各個群體的資料本身都是高斯分佈" 假設下做分群的，你可以從上面 Fig. 2 的 PCA 圖中看見。真實世界的資料，當然不會那麼完美符合高斯分佈，因此傳統的降維做法存在誤差和缺陷。這篇 paper 中提出的 FMA，就是為了解決這樣的問題。
 
 ### Marginal Fisher Analysis  
-![](img/7-1-3.png)      
+![](img/7-1-3.png)  
 
 MFA 是一種基於 graph embedding framework 的方法, 其中包含： 
 1. intrinsic graph: 評估同一類別 data 的緊密程度(compactness)  
