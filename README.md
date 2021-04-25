@@ -42,3 +42,10 @@ NAME: 洪筱慈
 
 * Graph Embedding and Extensions: A General Framework for Dimensionality Reduction  
     - [Summary](graph_embd.md), [Paper](https://www.researchgate.net/publication/220181328_Graph_Embedding_and_Extensions_A_General_Framework_for_Dimensionality_Reduction)  
+
+
+
+### Week 10: Latent Semantic Analysis
+
+* Efficient Indexing for Large Scale Visual Search
+    - [Summary](indexing.md), [Paper](http://vigir.missouri.edu/~gdesouza/Research/Conference_CDs/IEEE_ICCV_2009/contents/pdf/iccv2009_142.pdf)
