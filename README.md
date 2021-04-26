@@ -43,6 +43,10 @@ NAME: 洪筱慈
 * Graph Embedding and Extensions: A General Framework for Dimensionality Reduction  
     - [Summary](graph_embd.md), [Paper](https://www.researchgate.net/publication/220181328_Graph_Embedding_and_Extensions_A_General_Framework_for_Dimensionality_Reduction)  
 
+### Week 08: Sparse Coding and Solvers 
+
+*  Image Denoising Via Sparse and Redundant Representations Over Learned Dictionaries
+    - [Summary](sparse_coding.md), [Paper](https://www.egr.msu.edu/~aviyente/elad06.pdf)  
 
 
 ### Week 10: Latent Semantic Analysis
