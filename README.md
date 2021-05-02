@@ -53,3 +53,10 @@ NAME: 洪筱慈
 
 * Efficient Indexing for Large Scale Visual Search
     - [Summary](indexing.md), [Paper](http://vigir.missouri.edu/~gdesouza/Research/Conference_CDs/IEEE_ICCV_2009/contents/pdf/iccv2009_142.pdf)
+
+### Week 11: Deep Comprehension and Question and Answering
+
+* To Test Machine Comprehension, Start by Defining Comprehension
+    - [Summary](comprehension.md), [Paper](https://arxiv.org/abs/2005.01525)
+
+
