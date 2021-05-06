@@ -12,7 +12,7 @@ NAME: 洪筱慈
 - work field: `Machine comprehension`
 
 ## Key takeaway
-作者指出，已存在的 machine comprehension 模型，其實並沒有真正解決了這個問題，原因是因為 dataset 存在一些問題，例如所問的問題太過簡單，以及對於模型該理解文章的什麼沒有清楚定義。因此，作者提出一個明確定義“理解”的架構，並提出一個用這個架構建立的 dataset。作者並使用當時存在的各種模型測在這個 dataset，證明 machine comprehension 還有很大的進步空間，以此告訴大家，有明確定義架構的 dataset 對於 comprehension task 是重要的。
+作者指出，已存在的 machine comprehension 模型，其實並沒有真正解決了這個 task，原因是因為 dataset 存在一些問題，例如所問的問題太過簡單，以及對於模型該理解文章的什麼沒有清楚定義。因此，作者提出一個明確定義“理解”的架構，並提出一個用這個架構建立的 dataset。作者並使用當時存在的各種模型測在這個 dataset，證明 machine comprehension 還有很大的進步空間，以此告訴大家，有明確定義架構的 dataset 對於 comprehension task 是重要的。
 
 ## 已存 dataset 的缺陷
 已存在的 dataset 有幾種收 data 的方式，各有缺點：
