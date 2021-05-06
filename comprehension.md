@@ -8,7 +8,7 @@ NAME: 洪筱慈
 
 - Paper link: https://arxiv.org/abs/2005.01525
 - Conference: ACL 2020
-- First author: Jesse Duniietz, Gregory Burnham (Elemental Cognition)
+- First author: Jesse Dunietz, Gregory Burnham (Elemental Cognition)
 - work field: `Machine comprehension`
 
 ## Key takeaway
