@@ -60,3 +60,15 @@ NAME: 洪筱慈
 
 * To Test Machine Comprehension, Start by Defining Comprehension
     - [Summary](comprehension.md), [Paper](https://arxiv.org/abs/2005.01525)
+
+
+### Week 12: Automatic Neural Network Learning (autoML) + Structure Learning
+
+* Neural Architecture Search: A Survey
+    -[Summary](architecture.md), [Paper](https://arxiv.org/pdf/1808.05377.pdf)
+
+### Week 13: Few (Zero)-Shot Learning
+
+* Adaptive Subspaces for Few-Shot Learning
+
+    -[Summary](few_shot.md), [Paper](https://openaccess.thecvf.com/content_CVPR_2020/papers/Simon_Adaptive_Subspaces_for_Few-Shot_Learning_CVPR_2020_paper.pdf)
