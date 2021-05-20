@@ -28,6 +28,18 @@
 <div align="center">
 <img src=img/13-1-2.png width=1000x>
 </div>
+可以分成三個部分：
+    * feature extractor：使用了 4-convolutional layers 跟 ResNet-12。
+    * dynamic classifier
+    * Discriminative method
 先將 input image 經過feature extractor 投影到subspace，每個 class 都用 一個 vector 表示，再利用 discriminative method 將這些不同 class 的 vector 盡量的分開。
 
 
+## Result
+
+<div align="center">
+<img src=img/13-1-3.png width=1000x>
+</div>
+上圖中，1, 3 列是使用 prototypes 的方法， 2,4 列則是使用 Subspaces(本篇作法)。前兩欄是做在 2-class 問題，後兩欄則是 3-class 問題。
+在 2-class 問題中，可以看到，當沒有加 outliers 時，兩個方法表現得都很好，但是有了 outliers 之後， prototypes 方法裡面的 class boundary 就被嚴重影響，大量的 sample 被歸到錯誤的 class 去了。但是 subspace 的做法中，outliers 的方法影響就比較小，雖然仍受 outlier 影響而偏移 boundary，但是仍然能夠顧及大部分的 data，不至於造成太多的錯誤。
+由上圖可以看出，這篇 paper 提出的方法，在有 outlier 存在的狀況下，仍然能夠表現得好。   
