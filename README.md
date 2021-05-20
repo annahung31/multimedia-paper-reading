@@ -64,7 +64,7 @@ NAME: 洪筱慈
 
 ### Week 12: Automatic Neural Network Learning (autoML) + Structure Learning
 
-* Neural Architecture Search: A Survey
+* Neural Architecture Search: A Survey  
     -[Summary](architecture.md), [Paper](https://arxiv.org/pdf/1808.05377.pdf)
 
 ### Week 13: Few (Zero)-Shot Learning
