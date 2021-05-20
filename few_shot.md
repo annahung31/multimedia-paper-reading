@@ -17,14 +17,14 @@
 
 ## Method
 
-1. 利用 subspace 建立 classifier：
+### 利用 subspace 建立 classifier：
 <div align="center">
 <img src=img/13-1-1.png width=1000x>
 </div>
 (a)-(c) 是幾種常見的 few-shot learning classifier，例如 (a)是 pair-wised 的比較兩點的差異，而 (c)則是求出一條邊界，能夠區分兩個 class。 (d) 是這篇 paper 提出的方法，利用 subspace 來創造出 classifier。
 
 
-2. 整體 framework: 
+### Pipeline: 
 <div align="center">
 <img src=img/13-1-2.png width=1000x>
 </div>
