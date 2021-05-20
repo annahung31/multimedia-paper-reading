@@ -28,10 +28,12 @@
 <div align="center">
 <img src=img/13-1-2.png width=1000x>
 </div>
-可以分成三個部分：
-    * feature extractor：使用了 4-convolutional layers 跟 ResNet-12。
-    * dynamic classifier
-    * Discriminative method
+
+可以分成三個部分：    
+
+(1) feature extractor：使用了 4-convolutional layers 跟 ResNet-12。     
+(2) dynamic classifier     
+(3) Discriminative method     
 先將 input image 經過feature extractor 投影到subspace，每個 class 都用 一個 vector 表示，再利用 discriminative method 將這些不同 class 的 vector 盡量的分開。
 
 
