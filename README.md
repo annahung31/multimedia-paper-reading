@@ -71,4 +71,14 @@ NAME: 洪筱慈
 
 * Adaptive Subspaces for Few-Shot Learning
 
-    -[Summary](few_shot.md), [Paper](https://openaccess.thecvf.com/content_CVPR_2020/papers/Simon_Adaptive_Subspaces_for_Few-Shot_Learning_CVPR_2020_paper.pdf)
+    - [Summary](few_shot.md), [Paper](https://openaccess.thecvf.com/content_CVPR_2020/papers/Simon_Adaptive_Subspaces_for_Few-Shot_Learning_CVPR_2020_paper.pdf)
+
+
+### Week 14: Efficient Computation for Deep Learning Methods  
+
+* Importance Estimation for Neural Network Pruning  
+
+    - [Summary](pruning.md), [Paper](https://arxiv.org/pdf/1906.10771.pdf)
+
+
+
