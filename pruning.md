@@ -51,14 +51,14 @@ NAME: 洪筱慈
 
 ### 實驗
 
-在這篇 paper 中，作者先將這個方法實驗在較小的 model (LeNet3) 上，比較 greedy search 和 proposed method ，結果顯示在能忍受的 loss 增加範圍下，proposed 的方法能夠砍掉的 neuron 和 greedy search 差不多。
+* 在這篇 paper 中，作者先將這個方法實驗在較小的 model (LeNet3) 上，比較 greedy search 和 proposed method ，結果顯示在能忍受的 loss 增加範圍下，proposed 的方法能夠砍掉的 neuron 和 greedy search 差不多。
     <div align="left">
     <img src=img/14-1-3.png width=500x>
     </div>
 
 如圖，綠色的（oracle)是 greedy search，紫色是二階泰勒展開(Taylor SO on gate)，紅色是一階泰勒展開(Taylor FO on gate)。在 loss 增加到 1.0 的時候（圖中紅色虛線）， oracle 丟掉了 145 個 neuron，二階泰勒展開丟了 144 個，一階丟了 140 個。可以看見，泰勒展開能夠丟的數量跟 greedy search 是差不多的，並且一階和二階其實沒有差很多，因此使用一階是更有效率的。  
 
-實作在更大的 model 上（ResNet-101)也可以看到類似的結果：  
+* 實作在更大的 model 上（ResNet-101)也可以看到類似的結果：  
     <div align="left">
     <img src=img/14-1-4.png width=500x>
     </div>
