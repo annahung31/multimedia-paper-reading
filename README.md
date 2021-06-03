@@ -81,4 +81,11 @@ NAME: 洪筱慈
     - [Summary](pruning.md), [Paper](https://arxiv.org/pdf/1906.10771.pdf)
 
 
+### Week 15: 
+
+*  Fast and Furious: Real Time End-to-End 3D Detection, Tracking and Motion Forecasting with a Single Convolutional Net
+    - [Summary](FaF.md), [Paper](https://arxiv.org/abs/2012.12395)
+
+
+
 
