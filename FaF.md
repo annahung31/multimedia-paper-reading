@@ -20,7 +20,13 @@ NAME: 洪筱慈
 2. Tracking
 3. Motion forecasting(預測)
 
-舉監視器當例子，就是可以同時做到“偵測出有哪些車子”, "追蹤這些車子往哪裡開“, "接下來會往哪裡開"。
+舉監視器當例子，就是可以同時做到“偵測出有哪些、哪裡有車子”, "追蹤這些車子往哪裡開“, "接下來會往哪裡開"。
+
+<div align="left">
+<img src=img/15-1-4.png width=1000x>
+</div>
+
+
 
 ## Key contribution
 
@@ -36,7 +42,7 @@ NAME: 洪筱慈
 使用 voxel 來表示 3D 影像。 voxel 就像是玩 minecraft 裡面的一個一個立方體。因為是立方體，所以可以直接 apply convolutions。每一個 voxel 都會被 assign 一個 binary indicator 來表示是否有值，不過要注意這樣的 grid 是很 sparse 的（只有少數 voxel 有值）。
 在 voxel 的三個維度中，使用 2D convolution 來處理，而 high dimension 則是當作 channel，這樣就可以使模型學到 high dimension 中的資訊。  
 
-為了處理時序上的資訊，假設這在處理以時間為 t 的 frame，那在 t 前後的 frame 都被轉換座標到 t 的座標上，這樣才能比較車子在不同時間點是在哪個位置上。
+為了處理時序上的資訊，假設現在是處理時間為 t 的 frame，那在 t 前後的 frame 都被轉換座標到 t 的座標上，這樣才能比較車子在不同時間點是在哪個位置上。
 
 ### Model design
 
@@ -55,6 +61,11 @@ NAME: 洪筱慈
 2. 預測在其他時間點的 bounding box
 
 在每一個時間點， model 會預測 n 個 timestamps 的 bounding box。如此以來，只要有過去時間點的 bounding box 收集起來，就可以預測車子的軌跡了。
+<div align="left">
+<img src=img/15-1-5.png width=600x>
+</div>
+
+
 
 ### Loss function
 
