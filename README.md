@@ -81,11 +81,16 @@ NAME: 洪筱慈
     - [Summary](pruning.md), [Paper](https://arxiv.org/pdf/1906.10771.pdf)
 
 
-### Week 15: 
+### Week 15: Autonomous Driving: Perception, Prediction, and Planning (I)
 
 *  Fast and Furious: Real Time End-to-End 3D Detection, Tracking and Motion Forecasting with a Single Convolutional Net
     - [Summary](FaF.md), [Paper](https://arxiv.org/abs/2012.12395)
 
+
+## Week 16: Autonomous Driving: Perception, Prediction, and Planning (II) 
+
+* MP3: A Unified Model to Map, Perceive, Predict and Plan
+    - [Summary](MP3.md), [Paper]()
 
 
 
