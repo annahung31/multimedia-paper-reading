@@ -23,7 +23,7 @@ NAME: 洪筱慈
 舉監視器當例子，就是可以同時做到“偵測出有哪些、哪裡有車子”, "追蹤這些車子往哪裡開“, "接下來會往哪裡開"。
 
 <div align="left">
-<img src=img/15-1-4.png width=1000x>
+<img src=img/15-1-4.png width=700x>
 </div>
 
 
@@ -53,7 +53,7 @@ NAME: 洪筱慈
 
 兩者比較可見下圖：
 <div align="left">
-<img src=img/15-1-1.png width=1000x>
+<img src=img/15-1-1.png width=800x>
 </div>
 
 下一步，會加入兩個 branch 分別做:
@@ -62,7 +62,7 @@ NAME: 洪筱慈
 
 在每一個時間點， model 會預測 n 個 timestamps 的 bounding box。如此以來，只要有過去時間點的 bounding box 收集起來，就可以預測車子的軌跡了。
 <div align="left">
-<img src=img/15-1-5.png width=600x>
+<img src=img/15-1-5.png width=500x>
 </div>
 
 
@@ -87,7 +87,7 @@ NAME: 洪筱慈
 1. **Detection** result: 想當然是 outperform 其他方法。值得一提的是，把畫面距離拉長， FaF 的 performance 掉的幅度比其他方法低。我覺得這個 feature 是很有用的，畢竟在 real world 的應用裡面，很難保證畫面都是近拍的。
 
 <div align="left">
-<img src=img/15-1-3.png width=700x>
+<img src=img/15-1-3.png width=500x>
 </div>
 
 2. **Tracking** result: 給定 track id, 就能夠 output detection。評斷 tracking 的方法，是計算四種 matrix: MOTA, MOTP, MT, ML。和 Hungarian 方法相比，除了 MOTP 之外，FaF 都 outperform。
