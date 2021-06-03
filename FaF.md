@@ -56,3 +56,30 @@ NAME: 洪筱慈
 
 在每一個時間點， model 會預測 n 個 timestamps 的 bounding box。如此以來，只要有過去時間點的 bounding box 收集起來，就可以預測車子的軌跡了。
 
+### Loss function
+
+在上面提到的 branch 中，一個 task 是分類問題，另一個是 regression 問題，因此在 loss 裡面涵蓋了兩者，其中 regression 考慮了所有範圍內的時間點：
+
+<div align="left">
+<img src=img/15-1-2.png width=500x>
+</div>
+
+其中 t 是目前時間點，w 是模型參數，下標 cla 代表 classification loss， reg 則是 regression。
+
+對於 classification loss，對所有的位置跟 predefined box 計算 binary cross-entropy。 而對於 regression loss ，首先對影像做一些預處理得到  ground truth，再對所有的 target apply weighted smooth L1 loss。 （詳細請參考 session 3.3)   
+
+在訓練的過程中，因為 positive sample 比較多， negative sample 比較少，作者另外取了 classification predict score 比較差的一些 sample 來當作 negative sample 使用。
+
+
+### Experiment results
+
+1. **Detection** result: 想當然是 outperform 其他方法。值得一提的是，把畫面距離拉長， FaF 的 performance 掉的幅度比其他方法低。我覺得這個 feature 是很有用的，畢竟在 real world 的應用裡面，很難保證畫面都是近拍的。
+
+<div align="left">
+<img src=img/15-1-3.png width=700x>
+</div>
+
+2. **Tracking** result: 給定 track id, 就能夠 output detection。評斷 tracking 的方法，是計算四種 matrix: MOTA, MOTP, MT, ML。和 Hungarian 方法相比，除了 MOTP 之外，FaF 都 outperform。
+
+3. **Motion forecasting**: 計算車輛中心點的預測結果和真實位置的 L1 和 L2 位置。結果顯示，在未來的 10 的 frame 以內，預測的 l2 distance 可以小於 33 公分！
+
