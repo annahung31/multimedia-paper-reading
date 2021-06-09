@@ -90,7 +90,7 @@ NAME: 洪筱慈
 ### Week 16: Autonomous Driving: Perception, Prediction, and Planning (II) 
 
 * MP3: A Unified Model to Map, Perceive, Predict and Plan
-    - [Summary](MP3.md), [Paper]()
+    - [Summary](MP3.md), [Paper](https://arxiv.org/abs/2101.06806)
 
 
 
