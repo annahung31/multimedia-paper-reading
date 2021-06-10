@@ -9,7 +9,7 @@ NAME: 洪筱慈
 ## Basic information
 
 - Paper link: https://arxiv.org/abs/2101.06806
-- Conference: 
+- Conference: CVPR'21
 
 
 ## Key contribution
@@ -37,18 +37,20 @@ NAME: 洪筱慈
 1. online map: 包含 Drivable area, Reachable lanes(車道，盡量開在車道中線上), Intersection(十字路口，要看紅綠燈)
 2. Dynamic occupancy field: 辨識目前環境中**現在**哪裡有車，以及這些車**接下來**會怎麼開。其中，因為車子面對不同種類的 object 應有不同的反應，因此將車子、行人、腳踏車視為不同的 class。
 
+下圖中，第一列利用顏色深淺表示某一個位置中有車的機率，當車子在移動，機率高的區域就慢慢轉移。車子的移動則是用 velocity vector 表示。
+
 <div align="left">
 <img src=img/16-1-3.png width=500x>
 </div>
 
-上圖中，第一列利用顏色深淺表示某一個位置中有車的機率，當車子在移動，機率高的區域就慢慢轉移。車子的移動則是用 velocity vector 表示。
+
 
 3. Probabilistic Model:
 
 路上的車子、行人，以及腳踏車，此刻的位置是確定的，但是他們接下來的移動卻是有很高的不確定性，為了將這個不確定性納入考量，作者將這些 object 的移動用機率模型表示。每個 drivable area 中的 BEV grid cell 、每個移動中的 object ，都是 Bernoulli random variables，而從時間 t 到 t+1，某個 object 從位置 i_1 移動到位置 i_2 的機率就表示為：
 
 <div align="left">
-<img src=img/16-1-4.png width=300x>
+<img src=img/16-1-4.png width=500x>
 </div>
 
 
@@ -57,14 +59,12 @@ NAME: 洪筱慈
 1. retrieval-based trajectory sampler: 在上一階段收集完資訊之後，接下來就是要根據這些資訊，選出一條路徑來走。 作者使用 sample-based motion-planner，也就是從一大堆預先已經生好的軌跡中，選出最安全、最舒適可到達目的地的軌跡（果然如果要短時間內做出決策，還是得要 sample-based 呀）。 選擇的基準是 learned scoring function，根據前面得到的機率模型，預防跟其他車子相撞，並且確保車子開在車道裡面。所以 planner 會 evaluate 所有的軌跡，並從裡面挑出一個 cost 最小的軌跡：
 
 <div align="left">
-<img src=img/16-1-5.png width=300x>
+<img src=img/16-1-5.png width=500x>
 </div>
 
 2. routing: 除了 raw data 之外，另一個駕駛中的元素是導航。假如有 HD map，那導航的資訊就是一連串的車道資訊，車子只要跟著開就可以了。但是現在沒有 HD map，我們沒有車道資訊，只有一連串的指令：“請繼續直行”、“請向右轉”等等的。 作者將這些指令也用 Bernoulli random variables 表示，給定某一個指令，和 predicted map M, routing network(由 3 CNNs 組成) 會針對 BEV predict 一個 dense probability 。
 
-3. Trajectory scoring
-
-分別從 trajectory sampler 跟 routing predictor 得到資訊之後，在各種方面使用 score function 來 encourage 或 penalize ，得到想要的軌跡：
+3. Trajectory scoring: 分別從 trajectory sampler 跟 routing predictor 得到資訊之後，在各種方面使用 score function 來 encourage 或 penalize ，得到想要的軌跡：
 
 * 要能夠執行給定的 high level 指令
 * 不可能開到路外面去
@@ -74,14 +74,16 @@ NAME: 洪筱慈
 
 ### Learning
 
-在上述的方法中，各個模型訓練裡面，值得一提的是 scoring 的訓練，因為這些 score 是不可為的，所以作者使用了 max-margin loss 來做 panelize 那些擁有較低 loss 但是和人類作法不同，或者不安全的選擇。
+在上述的方法中，各個模型訓練裡面，值得一提的是 scoring 的訓練，因為這些 score 是不可微的，所以作者使用了 max-margin loss 來 panelize 那些 loss 比較低但是和人類作法不同，或者不安全的選擇。
+
+model train 在 URBANEXPERT dataset 上，是真實世界的畫面，收集了一些比較具有挑戰性的駕駛情境，每個情境都是 25 秒。
 
 ## Evaluation
 在這篇 paper 中，作者使用了兩種方法來評估 proposed method 和其他方法的 performance： closed-loop 和 open-loop。 
 
 1. closed-loop: 用 LiDAR 模擬器建構一個虛擬世界，並且從一小段真實駕駛情境開始，接下來讓 SDV 來做決策。評估的指標有：Success, OffRoute(有多少機率 SDV 駛離導航路線), 在 撞車/駛離道路 等等的 event 之前開了多遠 (progress per event)，以及一些衡量 comfort 的指標。
 
-2. Open-loop: 在自己收的 URBANEXPERT dataset 裡面做 evaluation，這個 dataset 是真實世界的畫面。利用 progress 來衡量在 5 秒內 SDV 沿著指定路徑走的距離， L2 則衡量 SDV 走的路徑和人類駕駛真實路徑的差距。
+2. Open-loop: 在剛剛提到的 URBANEXPERT test set（和 train set 地域上沒有重疊） evaluation，這個 dataset 是真實世界的畫面。利用 progress 來衡量在 5 秒內 SDV 沿著指定路徑走的距離， L2 則衡量 SDV 走的路徑和人類駕駛真實路徑的差距。
 
 不管在 closed-loop 還是 open-loop ，各項指標都顯示， proposed method 都 out-perform 其他方法。
 
