@@ -94,3 +94,10 @@ NAME: 洪筱慈
 
 
 
+
+## Additional resources
+The following are some good summaries made by other classmates of this course:  
+* [Shin Lee](https://medium.com/@shinying.lee)
+* [Tsunghan Wu](https://hackmd.io/@tsunghan-mama/Hk1Kn16z_)
+* [Tony Lin](https://hackmd.io/@ASjlcy2ZQqG8TixaQVzRcA/SkfXV4izO)
+* [Sebastian Huang](https://hackmd.io/@zetacat/BJhROEDmu/%2F%40zetacat%2FHkfLhe2zO)
