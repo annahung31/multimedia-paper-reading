@@ -1,5 +1,10 @@
 # Learning to Hash for Indexing Big Data – A Survey  
 
+
+## Personal Info
+ID: R08922A20  
+NAME: 洪筱慈 
+
 ## Paper basic information
 - Paper link: https://arxiv.org/abs/1509.05472  
 - Conference: Proceedings of the IEEE, 2016    
