@@ -38,15 +38,14 @@ Alibaba Group)
 ### 根據對 label 的需求分類
 
 1. unsupervised
-2. supervised
-    a. Pointwise
-    b. Pairwise
-    c. Triplet-wise
-    d. Listwise
-
+2. supervised  
+    * Pointwise  
+    * Pairwise  
+    * Triplet-wise  
+    * Listwise  
 
 <div align="left">
-<img src=img/5-1-1.png width=600x>
+<img src=img/5-1-1.png width=500x>
 </div>
 
 3. semi-supervised
@@ -82,7 +81,7 @@ Alibaba Group)
 大部分的方法，都是考慮 2~3 個 sample point 彼此之間的關係，而 Ranking Supervised Hashing 則是企圖保存 quary set 對應到的一組 data points 彼此間的順序：
 
 <div align="left">
-<img src=img/5-1-3.png width=600x>
+<img src=img/5-1-3.png width=500x>
 </div>
 
 
